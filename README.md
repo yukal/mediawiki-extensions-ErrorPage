@@ -2,7 +2,7 @@
 
 This extension shows the error-page on a non-existing page
 
-## Usage
+## Install
 See how to [install extensions](https://www.mediawiki.org/wiki/Manual:Extensions#Installing_an_extension)
 
 Download, unpack, rename the unpacked directory to `ErrorPage` and then just put this directory with the scripts into `MediaWiki` extensions directory.
