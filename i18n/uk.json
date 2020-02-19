@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alexander Yukal"
+		]
+	},
+	"errorpage-desc": "Забезпечує перенаправлення сторінок для помилок 404/410",
+	"errorpage-title": "$1. Сторінку не знайдено",
+	"errorpage-body": "<strong>$1.</strong>\n\n Можливо ви шукали \"[{{fullurl:$2}} $2]\"?\nНаразі на цій сторінці немає даних.\nВи можете [[Special:Search/{{PAGENAME}}|відшукати згадування даної назви]] на інших сторінках,\nабо <span class=\"plainlinks\">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} знайти відповідні записи в журналах].</span>\n\n&#8674; Можливо ви бажаєте [[{{MediaWiki:Mainpage}}|перейти на головну]]",
+	"errorpage-status-404": "Дані за заданою URL-адресою не знайдені",
+	"errorpage-status-410": "Сторінка за якою ви звернулись була видалена правовласником"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alexander Yukal"
+		]
+	},
+	"errorpage-desc": "Provides a destination for the 404/410 errors",
+	"errorpage-title": "$1. Page not found",
+	"errorpage-body": "<strong>$1.</strong>\n\n Maybe you were looking \"[{{fullurl:$2}} $2]\"?\nThere are currently no data on this page.\nYou can [[Special:Search/{{PAGENAME}}|find a mention of the name]] on other pages,\nor <span class=\"plainlinks\">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} find related journal entries].</span>\n\n&#8674; Maybe you want to go to [[{{MediaWiki:Mainpage}}|the main page]]",
+	"errorpage-status-404": "No data found for the given URL",
+	"errorpage-status-410": "The page you requested has been deleted by the copyright holder"
+}
