@@ -3,7 +3,7 @@
 	"author": "Alexander Yukal",
 	"descriptionmsg": "errorpage-desc",
 	"license-name": "MIT",
-	"type": "specialpage",
+	"type": "other",
 	"MessagesDirs": {
 		"ErrorPage": [
 			"i18n"
@@ -13,12 +13,11 @@
 		"MediaWiki\\Extension\\ErrorPage\\": "includes/"
 	},
 	"ExtensionMessagesFiles": {
-		"ErrorPageAlias": "includes/alias.php"
+		"ErrorPageAlias": "includes/ErrorPageAlias.php"
 	},
 	"Hooks": {
-		"BeforeDisplayNoArticleText": "MediaWiki\\Extension\\ErrorPage\\Hooks::onBeforeDisplayNoArticleText",
 		"SkinTemplateNavigation::Universal": "MediaWiki\\Extension\\ErrorPage\\Hooks::onSkinTemplateNavigation",
-		"getUserPermissionsErrors": "MediaWiki\\Extension\\ErrorPage\\Hooks::onGetUserPermissionsErrors"
+		"BeforeDisplayNoArticleText": "MediaWiki\\Extension\\ErrorPage\\Hooks::onBeforeDisplayNoArticleText"
 	},
 	"manifest_version": 2
 }

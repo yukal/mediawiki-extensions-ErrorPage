@@ -14,17 +14,14 @@ namespace MediaWiki\Extension\ErrorPage;
 
 use MediaWiki\MediaWikiServices;
 use Article;
-use Title;
-use User;
 use SkinTemplate;
-use RequestContext;
 
 class Hooks {
 
 	public static function onSkinTemplateNavigation( SkinTemplate $skinTemplate, Array &$links ) {
 		if (!$skinTemplate->getContext()->getUser()->isLoggedIn() && 
 			!$skinTemplate->getTitle()->getArticleID()) {
-				$links = [];
+			$links = [];
 		}
 	}
 
@@ -44,13 +41,13 @@ class Hooks {
 			$statusCode = $title->isDeleted() ?410 :404;
 			$out->setStatusCode( $defaultStatusCode );
 
-			if (!$loggedIn && !$sessionExists) {
+			if (!$loggedIn) {
 				$msgNotFound = wfMessage( 'errorpage-title', $defaultStatusCode );
 				$msgSubtitle = wfMessage( 'errorpage-status-'.$statusCode );
 	
 				$out->clearHTML();
 				$out->setPageTitle( $msgNotFound );
-				// $out->setHTMLTitle( $msgNotFound );
+				//$out->setHTMLTitle( $msgNotFound );
 				$out->addWikiMsg( 'errorpage-body', $msgSubtitle, $title->getBaseText());
 				// $out->addWikiMsg( 'noarticletext-nopermission' );
 
@@ -59,12 +56,6 @@ class Hooks {
 		}
 
 		return true;
-	}
-
-	public static function onGetUserPermissionsErrors( Title $title, User $user, $action, &$result ) {
-		if (!$user->isLoggedIn() && $action=='edit') {
-			RequestContext::getMain()->getOutput()->setStatusCode( 401 );
-		}
 	}
 
 }
